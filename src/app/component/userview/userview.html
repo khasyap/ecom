@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col-md-3" *ngFor="let p of myproducts">
+        <div class="card">
+            <div class="card-header">
+                <img [src]="p.productImage" class="img-fluid" height="150" alt="">
+            </div>
+            <div class="card-body">
+                <h1 class="card-title">{{p.productName}}</h1>
+                <p>
+                    {{p.productDescription}}
+                </p>
+                <p>Price<label for="" class="badge bg-primary">{{p.productPrice |currency:'INR'}}</label></p>
+            </div>
+            <div class="card-footer"></div>
+        </div>
+    </div>
+</div>

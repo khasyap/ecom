@@ -1,0 +1,16 @@
+nav{
+    height: 630px;
+    position: sticky;
+}
+ul{
+    margin-top: -150px;
+    position: relative;
+    left:50px;
+}
+.nav-link{
+    text-transform: capitalize;
+}
+.container-fluid{
+    margin-left:-50px;
+
+}
