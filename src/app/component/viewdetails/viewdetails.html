@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="col-md-12">
+        <h1>{{obj.productName}}</h1>
+    </div>
+    <div class="col-md-4">
+        <img [src]="obj.productImage" class="img-fluid">
+    </div>
+    <div class="col-md-8">
+        <h3>{{obj.productName}}</h3>
+        <p>{{obj.productDescription}}</p>
+        <p class="badge bg-primary">Price {{obj.productPrice}}</p>
+        <br>
+        <button class="btn btn-success">Buy Now</button>
+        <button class="btn btn-warning" (click)="addNow()">Add to Cart</button>
+    </div>
+</div>

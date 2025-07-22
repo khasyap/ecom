@@ -8,9 +8,10 @@ import { ViewProducts } from './component/view-products/view-products';
 import { ManageProducts } from './component/manage-products/manage-products';
 import { Userhome } from './component/userhome/userhome';
 import { Userview } from './component/userview/userview';
-import { Cart } from './component/cart/cart';
 import { Orders } from './component/orders/orders';
 import { Userdashboard } from './component/userdashboard/userdashboard';
+import { Viewdetails } from './component/viewdetails/viewdetails';
+import { Usercart } from './component/usercart/usercart';
 
 const routes: Routes = [
   {path:'',component:Login},
@@ -26,8 +27,9 @@ const routes: Routes = [
     children:[
       {path:'home',component:Userhome},
       {path:'view',component:Userview},
-      {path:'cart',component:Cart},
-      {path:'orders',component:Orders}
+      {path:'cart',component:Usercart},
+      {path:'orders',component:Orders},
+      {path:'details/:id',component:Viewdetails}
     ]
 
   }

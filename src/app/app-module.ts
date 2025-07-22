@@ -13,9 +13,10 @@ import { Home } from './component/home/home';
 import { Userdashboard } from './component/userdashboard/userdashboard';
 import { Userview } from './component/userview/userview';
 import { Userhome } from './component/userhome/userhome';
-import { Cart } from './component/cart/cart';
 import { Vieworders } from './component/vieworders/vieworders';
 import { Orders } from './component/orders/orders';
+import { Viewdetails } from './component/viewdetails/viewdetails';
+import { Usercart } from './component/usercart/usercart';
 
 @NgModule({
   declarations: [
@@ -29,9 +30,10 @@ import { Orders } from './component/orders/orders';
     Userdashboard,
     Userview,
     Userhome,
-    Cart,
     Vieworders,
-    Orders
+    Orders,
+    Viewdetails,
+    Usercart
   ],
   imports: [
     BrowserModule,
