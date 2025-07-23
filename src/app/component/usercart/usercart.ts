@@ -9,7 +9,7 @@ import { Cart } from '../../services/cart';
 })
 export class Usercart {
   constructor(private cart: Cart,private service:Product) { }
-  cartObj: any;
+  cartObj:any[]= [];
   ngOnInit() {
     this.cart.getCartItem().subscribe((res) => { this.cartObj = res });
   }

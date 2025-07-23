@@ -12,14 +12,31 @@ import { Cart } from '../../services/cart';
 export class Viewdetails {
 
   constructor(private bs:ActivatedRoute, private service:Product, private cart:Cart){}
-  pid:any;
-  obj:any;
+  pid:any;obj:any;
   result:any;
-  addNow(){
-      this.result=this.cart.addtocart(this.obj);
+  product:any;
+  
+  
+  addNow(obj:any){
+      this.result=this.cart.addtocart(obj);
       alert(this.result)
       }
+  selectproduct(obj:any){
+    this.product=obj;
+  }
+  user:any;
+  username:any;
+  address:any;
+  phone:any;
+
   ngOnInit(){
+    if(localStorage.getItem("user")!=null){
+      this.user=localStorage.getItem("user");
+      this.user=JSON.parse(this.user);
+      this.username=this.user.username;
+
+    }
+    
     this.pid =this.bs.snapshot.paramMap.get("id");
     console.log("coming from details "+this.pid);
     this.obj=this.service.getProductById(this.pid);

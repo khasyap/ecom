@@ -5,11 +5,17 @@ import { of } from 'rxjs';
   providedIn: 'root'
 })
 export class Cart {
-  cart:any[]=[
-  ]
+  cart:any[]=[];
   addtocart(obj:any){
-    this.cart.push(obj);
-    return "added to cart"
+    const cartitem=this.cart.find(e=>e.productId==obj.productId);
+    if(!cartitem){
+      this.cart.push(obj);
+      return "Added sucessfully"
+    }
+    else{
+      
+      return "Already added ";
+    }
   }
   getCartLength(){
     return this.cart.length;
